@@ -1,0 +1,16 @@
+
+.text
+.globl subfunc
+
+ subfunc:
+ li $v0, 4
+ la $a0, str2
+ syscall
+ 
+ li $t0, 5
+ 
+addi $v0, $v0, 5
+
+ syscall
+ jr $ra
+ 

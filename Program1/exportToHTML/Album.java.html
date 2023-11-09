@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Album.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7ec3e6;}
+.s1 { color: #ebebeb;}
+.s2 { color: #ed864a;}
+.s3 { color: #ed864a; font-weight: bold;}
+.s4 { color: #54b33e;}
+.s5 { color: #33ccff; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#131314">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Album.java</font>
+</center></td></tr></table>
+<pre><span class="s0">//Garret Jordan</span>
+<span class="s2">public class </span><span class="s1">Album {</span>
+    <span class="s1">String title</span><span class="s3">, </span><span class="s1">artist</span><span class="s3">, </span><span class="s1">genre</span><span class="s3">;</span>
+    <span class="s2">int </span><span class="s1">numOfSongs</span><span class="s3">;</span>
+
+    <span class="s2">public </span><span class="s1">Album(){</span>
+        <span class="s2">this</span><span class="s1">.title = </span><span class="s4">&quot;&quot;</span><span class="s3">;</span>
+        <span class="s2">this</span><span class="s1">.artist = </span><span class="s4">&quot;&quot;</span><span class="s3">;</span>
+        <span class="s2">this</span><span class="s1">.genre = </span><span class="s4">&quot;&quot;</span><span class="s3">;</span>
+        <span class="s2">this</span><span class="s1">.numOfSongs = </span><span class="s5">0</span><span class="s3">;</span>
+    <span class="s1">}</span>
+    <span class="s2">public </span><span class="s1">Album(String title</span><span class="s3">, </span><span class="s1">String artist</span><span class="s3">, </span><span class="s1">String genre</span><span class="s3">, </span><span class="s2">int </span><span class="s1">numOfSongs) {</span>
+
+        <span class="s2">this</span><span class="s1">.title = title</span><span class="s3">;</span>
+        <span class="s2">this</span><span class="s1">.artist = artist</span><span class="s3">;</span>
+        <span class="s2">this</span><span class="s1">.genre = genre</span><span class="s3">;</span>
+        <span class="s2">this</span><span class="s1">.numOfSongs = numOfSongs</span><span class="s3">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">//Setter and getter for title</span>
+    <span class="s2">public </span><span class="s1">String getTitle() {</span>
+        <span class="s2">return </span><span class="s1">title</span><span class="s3">;</span>
+    <span class="s1">}</span>
+
+    <span class="s2">public void </span><span class="s1">setTitle(String newTitle) {</span>
+        <span class="s2">this</span><span class="s1">.title = newTitle</span><span class="s3">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">//Setter and getter for artist</span>
+    <span class="s2">public </span><span class="s1">String getArtist() {</span>
+        <span class="s2">return </span><span class="s1">artist</span><span class="s3">;</span>
+    <span class="s1">}</span>
+
+    <span class="s2">public void </span><span class="s1">setArtist(String newArtist) {</span>
+        <span class="s2">this</span><span class="s1">.artist = newArtist</span><span class="s3">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">//Setter and getter for genre</span>
+    <span class="s2">public </span><span class="s1">String getGenre() {</span>
+        <span class="s2">return </span><span class="s1">genre</span><span class="s3">;</span>
+    <span class="s1">}</span>
+
+    <span class="s2">public void </span><span class="s1">setGenre(String newGenre) {</span>
+        <span class="s2">this</span><span class="s1">.genre = newGenre</span><span class="s3">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">//Setter and getter for numOfSongs</span>
+    <span class="s2">public int </span><span class="s1">getNumOfSongs() {</span>
+        <span class="s2">return </span><span class="s1">numOfSongs</span><span class="s3">;</span>
+    <span class="s1">}</span>
+
+    <span class="s2">public void </span><span class="s1">setNumOfSongs(</span><span class="s2">int </span><span class="s1">newNumOfSongs) {</span>
+        <span class="s2">this</span><span class="s1">.numOfSongs = newNumOfSongs</span><span class="s3">;</span>
+    <span class="s1">}</span>
+
+    <span class="s2">public </span><span class="s1">String toString() {</span>
+        <span class="s2">return </span><span class="s1">title + </span><span class="s4">&quot;, &quot; </span><span class="s1">+ artist + </span><span class="s4">&quot;, &quot; </span><span class="s1">+ genre + </span><span class="s4">&quot;, &quot; </span><span class="s1">+ numOfSongs</span><span class="s3">;</span>
+    <span class="s1">}</span>
+
+<span class="s1">}</span>
+
+</pre>
+</body>
+</html>

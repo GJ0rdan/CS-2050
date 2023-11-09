@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>program1.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7ec3e6;}
+.s1 { color: #ebebeb;}
+.s2 { color: #ed864a;}
+.s3 { color: #ed864a; font-weight: bold;}
+.s4 { color: #54b33e;}
+.s5 { color: #33ccff; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#131314">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+program1.java</font>
+</center></td></tr></table>
+<pre><span class="s0">// Garret Jordan</span>
+<span class="s2">import </span><span class="s1">java.util.InputMismatchException</span><span class="s3">;</span>
+<span class="s2">import </span><span class="s1">java.util.Scanner</span><span class="s3">;</span>
+
+<span class="s2">public class </span><span class="s1">program1 {</span>
+    <span class="s2">public static void </span><span class="s1">main(String[] args) {</span>
+        <span class="s1">String userTitle</span><span class="s3">, </span><span class="s1">userGenre</span><span class="s3">, </span><span class="s1">userArtist</span><span class="s3">;</span>
+        <span class="s2">int </span><span class="s1">userNumOfSongs</span><span class="s3">;</span>
+
+        <span class="s1">Scanner input = </span><span class="s2">new </span><span class="s1">Scanner (System.in)</span><span class="s3">;</span>
+        <span class="s1">Album standardAlbum = </span><span class="s2">new </span><span class="s1">Album(</span><span class="s4">&quot;Renaissance&quot;</span><span class="s3">, </span><span class="s4">&quot;Beyonce&quot;</span><span class="s3">, </span><span class="s4">&quot;easy listening&quot;</span><span class="s3">, </span><span class="s5">10</span><span class="s1">)</span><span class="s3">;</span>
+
+        <span class="s1">Album customAlbum = </span><span class="s2">new </span><span class="s1">Album()</span><span class="s3">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;Hello, welcome to Album Editor!&quot;</span><span class="s1">)</span><span class="s3">;</span>
+
+        <span class="s2">int </span><span class="s1">maxNum = </span><span class="s5">3</span><span class="s3">;</span>
+        <span class="s2">int </span><span class="s1">num = </span><span class="s5">0</span><span class="s3">;</span>
+
+        <span class="s2">while</span><span class="s1">(num &lt; maxNum)</span>
+        <span class="s1">{</span>
+            <span class="s1">System.out.println(</span><span class="s4">&quot;Please enter title for album &quot; </span><span class="s1">+ (num + </span><span class="s5">1</span><span class="s1">) + </span><span class="s4">&quot;:&quot;</span><span class="s1">)</span><span class="s3">;</span>
+            <span class="s1">userTitle = input.nextLine()</span><span class="s3">;</span>
+            <span class="s1">standardAlbum.setTitle(userTitle)</span><span class="s3">;</span>
+
+            <span class="s1">System.out.println(</span><span class="s4">&quot;Please enter artist for album &quot;</span><span class="s1">+ (num+</span><span class="s5">1</span><span class="s1">)+ </span><span class="s4">&quot;:&quot;</span><span class="s1">)</span><span class="s3">;</span>
+            <span class="s1">userArtist = input.nextLine()</span><span class="s3">;</span>
+            <span class="s1">standardAlbum.setArtist(userArtist)</span><span class="s3">;</span>
+
+            <span class="s2">while </span><span class="s1">(</span><span class="s2">true</span><span class="s1">) {</span>
+                <span class="s1">System.out.print(</span><span class="s4">&quot;Please enter one of the select Genre's for album &quot; </span><span class="s1">+ (num + </span><span class="s5">1</span><span class="s1">) + </span><span class="s4">&quot; (hip-hop, easy listening, orchestral ,your parents, theatre):&quot;</span><span class="s1">)</span><span class="s3">;</span>
+                <span class="s1">userGenre = input.nextLine()</span><span class="s3">;</span>
+
+                    <span class="s2">if </span><span class="s1">(userGenre.equalsIgnoreCase(</span><span class="s4">&quot;hip-hop&quot;</span><span class="s1">) || userGenre.equalsIgnoreCase(</span><span class="s4">&quot;easy listening&quot;</span><span class="s1">) || userGenre.equalsIgnoreCase(</span><span class="s4">&quot;orchestral&quot;</span><span class="s1">) || userGenre.equalsIgnoreCase(</span><span class="s4">&quot;your parents&quot;</span><span class="s1">) || userGenre.equalsIgnoreCase(</span><span class="s4">&quot;theatre&quot;</span><span class="s1">)) {</span>
+                        <span class="s1">standardAlbum.setGenre(userGenre)</span><span class="s3">;</span>
+                        <span class="s2">break</span><span class="s3">;</span>
+                    <span class="s1">} </span><span class="s2">else </span><span class="s1">{</span>
+                        <span class="s1">System.out.println(</span><span class="s4">&quot;Please enter a valid genre.&quot;</span><span class="s1">)</span><span class="s3">;</span>
+                    <span class="s1">}</span>
+                <span class="s1">}</span>
+
+            <span class="s2">try </span><span class="s1">{</span>
+                <span class="s1">System.out.println(</span><span class="s4">&quot;Please enter the number of songs in album &quot; </span><span class="s1">+ (num + </span><span class="s5">1</span><span class="s1">) + </span><span class="s4">&quot;:&quot;</span><span class="s1">)</span><span class="s3">;</span>
+                <span class="s1">userNumOfSongs = input.nextInt()</span><span class="s3">;</span>
+                <span class="s0">//input.nextLine();</span>
+                <span class="s1">standardAlbum.setNumOfSongs(userNumOfSongs)</span><span class="s3">;</span>
+            <span class="s1">}</span><span class="s2">catch</span><span class="s1">(InputMismatchException e){</span>
+                <span class="s1">System.out.println(</span><span class="s4">&quot;Please enter a number&quot;</span><span class="s1">)</span><span class="s3">;</span>
+            <span class="s1">}</span>
+            <span class="s1">input.nextLine()</span><span class="s3">;</span>
+
+            <span class="s1">System.out.println(</span><span class="s4">&quot;Album &quot; </span><span class="s1">+(num+</span><span class="s5">1</span><span class="s1">)+ </span><span class="s4">&quot;: &quot; </span><span class="s1">+</span><span class="s4">&quot;</span><span class="s2">\n</span><span class="s4">Title: &quot;</span><span class="s1">+standardAlbum.getTitle()+</span><span class="s4">&quot;</span><span class="s2">\n</span><span class="s4">Artist: &quot;</span><span class="s1">+ standardAlbum.getArtist()+</span><span class="s4">&quot;</span><span class="s2">\n</span><span class="s4">Genre: &quot;</span><span class="s1">+ standardAlbum.getGenre()+ </span><span class="s4">&quot;</span><span class="s2">\n</span><span class="s4">Number of Songs: &quot;</span><span class="s1">+standardAlbum.getNumOfSongs() )</span><span class="s3">;</span>
+
+
+            <span class="s1">num++</span><span class="s3">;</span>
+        <span class="s1">}</span>
+
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+
+</pre>
+</body>
+</html>

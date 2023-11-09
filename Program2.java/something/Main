@@ -1,0 +1,17 @@
+.data
+str: .asciiz "value of X before subfunction is: \n "
+str2:.asciiz "Value of X is after subfunction is\n"
+.text
+
+main:
+addi $s0, $0,2
+
+li $v0, 4
+la $a0, str
+syscall
+
+li $v0,1
+move $a0, $s0
+jal subfunc
+#li $v0, 10
+syscall

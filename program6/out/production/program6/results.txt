@@ -1,0 +1,9 @@
+Selection Sort Time for String with 10,000 characters: 0.2584584
+Bubble sort time for string with 10,000 characters: 0.6473264
+Insertion Sort Time for String with 10,000 characters: 0.2893951
+Array List Time for Strings with 10,000 characters: 0.0048241
+---------------------------------------------------------------------------
+Selection Sort Time for Integer with 20,000 characters: 0.1844858
+Bubble sort time for Integer with 20,000 characters: 0.6317132
+Insertion Sort Time for Integer with 20,000 characters: 0.0477031
+Array List Sort Time for Integer with 20,000 characters: 0.0194678
