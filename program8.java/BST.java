@@ -27,7 +27,7 @@ public class BST {
             }
             return root;
         }
-        //function that finds the totel number of nodes in the tree
+        //function that finds the total number of nodes in the tree
     public int totalNodes(Node root) {
         if (root == null){//base case, if root is empty set zero
             return 0;

@@ -7,11 +7,13 @@ public class Program2 {
 
     // TODO #1: finish the method's implementation
     public static double add(double a, double b) {
+
         return a + b;
     }
 
     // TODO #2: finish the method's implementation
     public static double subtract(double a, double b) {
+
         return a - b;
     }
 
@@ -42,7 +44,11 @@ public class Program2 {
 
         program2Test.testNegativeAddPositive();
 
-        System.out.println(program2Test);
+        System.out.println("Addition: " + add(3, 5));
+        System.out.println("Subtraction: " + subtract(8, 3));
+        System.out.println("Multiplication: " + multiply(2, 4));
+        System.out.println("Division: " + divide(10, 2));
+    }
 
         //System.out.print(program2Test.testZeroAddZero());
         //System.out.println(program2Test.testNegativeAddPositive());
